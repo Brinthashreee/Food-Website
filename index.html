@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BeeHungry • Food Ordering</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-inner">
+            <a href="#home" class="logo"><i class="fa-solid fa-utensils"></i> Bee<span>Hungry</span></a>
+            <nav class="nav-links">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+                <a href="#cart" class="nav-link cart-link">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </a>
+            </nav>
+            <button class="nav-toggle" aria-label="Toggle Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero">
+        <div class="container hero-inner">
+            <div class="hero-text">
+                <h1>Delicious food delivered, fresh to your door</h1>
+                <p>Explore flavors crafted with love. Fast delivery, fresh ingredients, and irresistible taste.</p>
+                <a href="#menu" class="btn cta-btn">Order Now</a>
+            </div>
+            <div class="hero-art">
+                <img src="https://images.unsplash.com/photo-1496412705862-e0088f16f791?q=80&w=1600&auto=format&fit=crop" alt="Dark, fiery cooking scene" onerror="this.onerror=null;this.src='https://picsum.photos/seed/dark-fire-food/1200/800';"/>
+            </div>
+        </div>
+        <div class="hero-decor"></div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu" class="menu section">
+        <div class="container">
+            <h2 class="section-title">Our Popular Dishes</h2>
+            <div id="menu-grid" class="menu-grid"><!-- Cards injected by JS --></div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about section">
+        <div class="container about-inner">
+            <div class="about-text">
+                <h2>About BeeHungry</h2>
+                <p>We combine vibrant flavors with the freshest ingredients. From farm to fork, our mission is to serve joy on every plate with speed, care, and a smile.</p>
+                <ul class="about-list">
+                    <li><i class="fa-solid fa-leaf"></i> Fresh, locally sourced produce</li>
+                    <li><i class="fa-solid fa-truck-fast"></i> Fast, contactless delivery</li>
+                    <li><i class="fa-solid fa-bowl-food"></i> Chef-curated seasonal menu</li>
+                </ul>
+            </div>
+            <div class="about-art">
+                <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1600&auto=format&fit=crop" alt="Fresh ingredients" onerror="this.onerror=null;this.src='https://picsum.photos/seed/food-about/1200/800';" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart -->
+    <section id="cart" class="cart section">
+        <div class="container">
+            <h2 class="section-title">Your Cart</h2>
+            <div class="cart-layout">
+                <ul id="cart-items" class="cart-items"><!-- Items injected by JS --></ul>
+                <div class="cart-summary">
+                    <div class="summary-row"><span>Subtotal</span><span id="cart-subtotal">$0.00</span></div>
+                    <div class="summary-row"><span>Delivery</span><span id="cart-delivery">$2.50</span></div>
+                    <div class="summary-row total"><span>Total</span><span id="cart-total">$2.50</span></div>
+                    <button class="btn checkout-btn" id="checkout-btn"><i class="fa-solid fa-bag-shopping"></i> Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <footer id="contact" class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a href="#home" class="logo"><i class="fa-solid fa-utensils"></i> Bee<span>Hungry</span></a>
+                <p>Serving freshness daily. Reach us for catering and parties!</p>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-phone"></i> 05240 85955</p>
+                <p><i class="fa-solid fa-envelope"></i> hello@beehungry.com</p>
+                <p><i class="fa-solid fa-location-dot"></i> 123 Los Angeles, California</p>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> BeeHungry. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
